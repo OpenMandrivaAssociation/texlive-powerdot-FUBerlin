@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/powerdot-FUBerlin
+# catalog-date 2009-07-30 21:57:53 +0200
+# catalog-license lppl
+# catalog-version 0.01
 Name:		texlive-powerdot-FUBerlin
 Version:	0.01
 Release:	1
@@ -53,6 +59,7 @@ examples do of course differ.
 %doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleStyle.pdf
 %doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleStyle.tex
 %doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/silberlaube2.eps
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +70,5 @@ examples do of course differ.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
