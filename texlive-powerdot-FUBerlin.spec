@@ -6,7 +6,7 @@
 # catalog-version 0.01
 Name:		texlive-powerdot-FUBerlin
 Version:	0.01
-Release:	6
+Release:	7
 Summary:	Powerdot, using the style of FU Berlin
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-FUBerlin
