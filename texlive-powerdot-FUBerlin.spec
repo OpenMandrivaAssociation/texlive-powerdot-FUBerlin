@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/powerdot-FUBerlin
-# catalog-date 2009-07-30 21:57:53 +0200
-# catalog-license lppl
-# catalog-version 0.01
 Name:		texlive-powerdot-FUBerlin
-Version:	0.01
-Release:	11
+Version:	52922
+Release:	1
 Summary:	Powerdot, using the style of FU Berlin
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-FUBerlin
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-FUBerlin.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-FUBerlin.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-fuberlin.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-fuberlin.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,48 +23,24 @@ identical, so the catalogue only lists one; the sources of the
 examples do of course differ.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/powerdot-FUBerlin/FUpowerdot.cls
-%{_texmfdistdir}/tex/latex/powerdot-FUBerlin/powerdot-BerlinFU.sty
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/FULogo.eps
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/FULogo_RGB.eps
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/FUbib.eps
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/FUseal.eps
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/README
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleClass.pdf
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleClass.tex
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleStyle.pdf
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/exampleStyle.tex
-%doc %{_texmfdistdir}/doc/latex/powerdot-FUBerlin/silberlaube2.eps
+%{_texmfdistdir}/tex/latex/powerdot-fuberlin
+%doc %{_texmfdistdir}/doc/latex/powerdot-fuberlin
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.01-2
-+ Revision: 755026
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.01-1
-+ Revision: 719291
-- texlive-powerdot-FUBerlin
-- texlive-powerdot-FUBerlin
-- texlive-powerdot-FUBerlin
-- texlive-powerdot-FUBerlin
-
