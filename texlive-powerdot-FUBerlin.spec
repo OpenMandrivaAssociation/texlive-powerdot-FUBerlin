@@ -1,6 +1,6 @@
 Name:		texlive-powerdot-FUBerlin
 Version:	52922
-Release:	1
+Release:	2
 Summary:	Powerdot, using the style of FU Berlin
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-FUBerlin
